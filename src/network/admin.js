@@ -11,6 +11,23 @@ export function repairSubmit (data) {
 
 
 
+export function repairSearchlist (data) {
+  return request({
+    url: '/api/repair/searchlist',
+    method: 'get',
+    data
+  })
+}
+
+export function maintainSubmit (data) {
+  return request({
+    url: '/api/maintainPlan/submit',
+    method: 'post',
+    data
+  })
+}
+
+
 
 
 

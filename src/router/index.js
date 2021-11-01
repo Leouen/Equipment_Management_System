@@ -35,8 +35,12 @@ const routes = [
         component: () => import('../views/admin/childCpn/index.vue') //懒加载组件
       },
       {
-        path: 'addEquipSheet',
-        component: () => import('../views/admin/childCpn/addEquipSheet.vue') //懒加载组件
+        path: 'addMaintainSheet',
+        component: () => import('../views/admin/childCpn/addMaintainSheet.vue') //懒加载组件
+      },
+      {
+        path: 'equipSheet',
+        component: () => import('../views/admin/childCpn/equipSheet.vue') //懒加载组件
       }
     ]
   }

@@ -1,5 +1,6 @@
 <template>
   <div style="width:400px;margin: 40px auto 0px">
+    <h2>填写设备维修单</h2>
     <el-form ref="form" :model="form" label-width="80px">
       <el-form-item label="维修单号">
         <el-input v-model="form.repairNo"></el-input>
@@ -51,7 +52,7 @@ export default {
         repairPeople: '',
         repairPrice: null,
         repairStatus: '',
-        repairSubmitPeople: '',
+        repairSubmitPeople: this.$store.state.user,
         repairSubmitTime: '',
         verifyDescr: '',
         verifyPasstime: '',
