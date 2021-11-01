@@ -39,6 +39,7 @@ export default {
   height: 340px;
   background: #ffffffc2;
 }
+
 .logo{
   width: 200px;
 }
