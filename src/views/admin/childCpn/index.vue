@@ -25,7 +25,7 @@
         <el-input v-model="form.repairPrice"></el-input>
       </el-form-item>
       <el-form-item label="维修状态">
-        <el-input v-model="form.repairStatus"></el-input>
+        <el-input disabled v-model="form.repairStatus"></el-input>
       </el-form-item>
       <el-form-item label="故障描述">
         <el-input type="textarea" v-model="form.faultDescr"></el-input>
@@ -51,7 +51,7 @@ export default {
         repairNo: '',
         repairPeople: '',
         repairPrice: null,
-        repairStatus: '',
+        repairStatus:'管理员提交',
         repairSubmitPeople: this.$store.state.user,
         repairSubmitTime: '',
         verifyDescr: '',
@@ -77,11 +77,11 @@ export default {
             repairNo: '',
             repairPeople: '',
             repairPrice: null,
-            repairStatus: '',
             repairSubmitPeople: '',
             repairSubmitTime: '',
             verifyDescr: '',
             verifyPasstime: '',
+            repairStatus:'管理员提交'
           }
         } else {
           this.$message({

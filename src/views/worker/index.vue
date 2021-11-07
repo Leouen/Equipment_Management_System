@@ -1,10 +1,10 @@
 <template>
-  <el-container class="adminIndex">
-    <el-header class="adminHeader">
+  <el-container class="workerIndex">
+    <el-header class="workerHeader">
       <h1
         style="font-size:30px;color:#fff;line-height: 60px; display: flex; align-items: center;"
       >
-        <span>维保管理员后台</span>
+        <span>维修保养人员平台</span>
         <img
           src="../../assets/campus.jpg"
           style="width:200px;height:100%"
@@ -19,7 +19,7 @@
       </div>
     </el-header>
     <el-container>
-      <el-aside class="adminMenu" style="width: 180px">
+      <el-aside class="workerMenu" style="width: 180px">
         <el-menu
           default-active="1"
           class="el-menu-vertical-demo"
@@ -29,39 +29,15 @@
         >
           <el-menu-item index="1">
             <i class="el-icon-edit"></i>
-            <span slot="title">填写设备维修单</span>
+            <span slot="title">待维修维修单</span>
           </el-menu-item>
           <el-menu-item index="2">
             <i class="el-icon-edit-outline"></i>
-            <span slot="title">填写设备保养计划</span>
+            <span slot="title">待保养保养单</span>
           </el-menu-item>
-          <el-menu-item index="3">
-            <i class="el-icon-document"></i>
-            <span slot="title">待报修维修单</span>
-          </el-menu-item>
-          <el-menu-item index="4">
-            <i class="el-icon-tickets"></i>
-            <span slot="title">保养计划管理</span>
-          </el-menu-item>
-          <el-menu-item index="5">
-            <i class="el-icon-document-remove"></i>
-            <span slot="title">保养统计</span>
-          </el-menu-item>
-          <!-- <el-menu-item index="6">
-            <i class="el-icon-document-add"></i>
-            <span slot="title">待验证保养单</span>
-          </el-menu-item>
-          <el-menu-item index="7">
-            <i class="el-icon-document-checked"></i>
-            <span slot="title">已验证维修单</span>
-          </el-menu-item>
-          <el-menu-item index="8">
-            <i class="el-icon-document-checked"></i>
-            <span slot="title">已验证保养单</span>
-          </el-menu-item> -->
         </el-menu>
       </el-aside>
-      <el-main class="adminMain">
+      <el-main class="workerMain">
         <router-view />
       </el-main>
     </el-container>
@@ -75,15 +51,13 @@ export default {
     handleSelect(key, keyPath) {
       console.log(key, keyPath)
       if (key == 1) {
-        this.$router.push('/admin/index')
+        this.$router.push('/worker/worker1')
       } else if (key == 2) {
-        this.$router.push('/admin/addMaintainSheet')
+        this.$router.push('/worker/worker2')
       }else if (key == 3) {
-        this.$router.push('/admin/equipSheet')
-      }else if (key == 4) {
         this.$router.push('/admin/maintainSheet')
-      }else if (key == 5) {
-        this.$router.push('/admin/checkall')
+      }else if (key == 4) {
+        // this.$router.push('/admin/equipSheet')
       }
     },
     toHome() {
@@ -121,40 +95,40 @@ export default {
 
 <style scoped>
 
-.adminIndex {
+.workerIndex {
   height: 100vh;
-  background: #333;
+  background: rgba(15, 169, 177, 0.612);
 }
 
-.asideMenu {
-  background: #333;
+/* .workerMenu {
+  background: rgb(11, 73, 126);
   width: 100px;
-}
+} */
 
-.adminHeader {
-  background: #333;
+.workerHeader {
+  background: rgb(19, 177, 148);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.adminHeader img {
+.workerHeader img {
   width: 30px;
   height: 30px;
 }
 
-.adminHeader div {
+.workerHeader div {
   line-height: 60px;
   color: #fff;
   display: flex;
   align-items: center;
 }
 
-.adminHeader span {
+.workerHeader span {
   padding: 0 40px 0 20px;
 }
 
-.adminMain {
+.workerMain {
   background: #fff;
 }
 

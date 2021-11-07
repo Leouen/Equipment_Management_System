@@ -24,6 +24,9 @@
       <el-form-item label="保养类型">
         <el-input v-model="form.maintainType"></el-input>
       </el-form-item>
+      <el-form-item label="保养状态">
+        <el-input v-model="form.maintainStatus"></el-input>
+      </el-form-item>
       <el-form-item label="保养内容">
         <el-input v-model="form.maintainContent"></el-input>
       </el-form-item>
@@ -51,6 +54,7 @@ export default {
         maintainPlanId: '',
         maintainStartime: '',
         maintainType: '',
+        maintainStatus: '',
       },
     }
   },
@@ -61,7 +65,7 @@ export default {
         if (res === '成功') {
           // 登陆成功 ，开始获得用户数据
           this.$message({
-            message: '维修单提交成功',
+            message: '保养计划提交成功',
             type: 'success',
           })
           this.form = {
@@ -72,10 +76,11 @@ export default {
             maintainPlanId: '',
             maintainStartime: '',
             maintainType: '',
+            maintainStatus: '',
           }
         } else {
           this.$message({
-            message: '亲~ 请输入维修单信息',
+            message: '亲~ 请输入保养计划信息',
             type: 'warning',
           })
         }
@@ -90,6 +95,7 @@ export default {
         maintainPlanId: '',
         maintainStartime: '',
         maintainType: '',
+        maintainStatus: '',
       }
     },
   },

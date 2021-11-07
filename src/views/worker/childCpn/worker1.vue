@@ -21,9 +21,9 @@
 
     <el-table-column fixed="right" label="操作" width="100">
       <template slot-scope="scope">
-        <el-button @click="
+        <!-- <el-button @click="
               handleClick(scope.row.repairNo, scope.$index, tableData)
-            " type="text" size="small">删除</el-button>
+            " type="text" size="small">删除</el-button> -->
         <el-button type="text" @click="setValue(scope.row)" size="small">编辑</el-button>
       </template>
     </el-table-column>
@@ -36,7 +36,7 @@
           <el-input disabled v-model="form.repairNo"></el-input>
         </el-form-item>
         <el-form-item label="维修状态">
-          <el-input v-model="form.repairStatus"></el-input>
+          <el-input disabled v-model="form.repairStatus"></el-input>
         </el-form-item>
         <el-form-item label="维修描述">
           <el-input type="textarea" v-model="form.repairDescr"></el-input>
@@ -112,7 +112,7 @@ export default {
         repairPeople: '',
         repairDescr: '',
         faultDescr: '',
-        maintainPlanId: '',
+        repairStatus:'维修人员提交',
         maintainStartime: '',
         maintainType: '',
         maintainStatus: '',

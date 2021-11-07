@@ -129,6 +129,8 @@ export default {
               })
               if (this.value === '设备管理员') {
                 this.$router.push({ path: '/admin/index' })
+              }else{
+                this.$router.push({ path: '/worker/index' })
               }
             } else {
               this.$message({
